@@ -14,11 +14,12 @@ class Window(pyglet.window.Window):
     def onResize(self, width, height):
         print("resize %d * %d" % (width, height))  #for testing only
 
-#the width & height didn't print, maybe if I don't hard code them?
+#the width & height didn't print, changing it not being hard coded didn't work
+#it did something weird though, went off center.
 class Game:
     def __init__(self):
         self.config = gl.Config(major_version = 3)
-        self.window = Window(config = self.config, caption = "EditCraft", resizable = True, vsync = False)
+        self.window = Window(config = self.config, width = 800, height = 600, caption = "EditCraft", resizable = True, vsync = False)
 
     def run(self):
         pyglet.app.run()
