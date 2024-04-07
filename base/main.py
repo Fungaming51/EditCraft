@@ -66,13 +66,12 @@ class Window(pyglet.window.Window):
             gl.GL_UNSIGNED_INT,
             None)
 
-    def onResize(self, width, height):
+    def on_resize(self, width, height):
         print(f"Resize {width} * {height}")  #for testing only
-        gl.glViewport(0, 0, width, hieght)
+        gl.glViewport(0, 0, width, height)
 
-#the width & height didn't print, changing it not being hard coded didn't work
-#it did something weird though, went off center.
-#tried a different method, it didn't work
+#why the hell did an underscore change it
+        
 class Game:
     def __init__(self):
         self.config = gl.Config(major_version = 3)
