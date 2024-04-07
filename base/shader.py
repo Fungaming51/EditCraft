@@ -2,7 +2,7 @@ import ctypes
 import pyglet.gl as gl
 
 class Shader_error(Exception):
-    def__init__(self, message):
+    def __init__(self, message):
         self.message = message
 
 def create_shader(target, source_path):
@@ -15,13 +15,13 @@ def create_shader(target, source_path):
     source_length = ctypes.c_int(len(source) + 1)
     source_buffer = ctypes.create_string_buffer(source)
 
-    buffer_pointer = ctype.cast(
+    buffer_pointer = ctypes.cast(
         ctypes.pointer(ctypes.pointer(source_buffer)),
         ctypes.POINTER(ctypes.POINTER(ctypes.c_char)))
 
     #shader compile
 
-    gl.glSHaderSource(target, 1, buffer_pointer, ctypes.byref(source_length))
+    gl.glShaderSource(target, 1, buffer_pointer, ctypes.byref(source_length))
     gl.glCompileShader(target)
 
     #error handling
@@ -29,7 +29,7 @@ def create_shader(target, source_path):
     log_length = gl.GLint(0)
     gl.glGetShaderiv(target, gl.GL_INFO_LOG_LENGTH, ctypes.byref(log_length))
 
-    log_buffer = ctypes.create_string_buffer(log_lehgth.value)
+    log_buffer = ctypes.create_string_buffer(log_length.value)
     gl.glGetShaderInfoLog(target, log_length, None, log_buffer)
 
     if log_length:
@@ -41,13 +41,13 @@ class Shader:
 
         #vertex shader
 
-        self.vert_shader = gl.glCreatShader(gl.GL_VERTEX_SHADER)
+        self.vert_shader = gl.glCreateShader(gl.GL_VERTEX_SHADER)
         create_shader(self.vert_shader, vert_path)
         gl.glAttachShader(self.program, self.vert_shader)
 
         #fragment shader
 
-        self.frag_shader = gl.glCreatShader(gl.GL_FRAGMENT_SHADER)
+        self.frag_shader = gl.glCreateShader(gl.GL_FRAGMENT_SHADER)
         create_shader(self.frag_shader, frag_path)
         gl.glAttachShader(self.program, self.frag_shader)
 
