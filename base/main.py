@@ -1,7 +1,7 @@
 import ctypes
 import pyglet
-pyglet.options["shadow_window"] = False
-pyglet.options["debug_gl"] = False
+#pyglet.options["shadow_window"] = False
+#pyglet.options["debug_gl"] = False
 import pyglet.gl as gl
 import shader
 
@@ -19,7 +19,7 @@ indices = [#makes a square (this is for me not for you)
 
 class Window(pyglet.window.Window):
     def __init__(self, **args):
-        super(Window, self).__init__(**args)
+        super().__init__(**args)
 
         #vertex array object
 
@@ -56,7 +56,7 @@ class Window(pyglet.window.Window):
         self.shader = shader.Shader("vert.glsl", "frag.glsl")
         self.shader.use()
 
-    def onDraw(self):
+    def on_draw(self):
         gl.glClearColor(1.0, 0.5, 1.0, 1.0)
         self.clear()
 
