@@ -14,8 +14,8 @@ def on_mouse_press(x, y, button, modifiers):
 @window.event
 def on_draw():
    # print("Hello")
-   glBegin(GL_LINES)
-   glVertex3f(100.0,100.0,0.25)
-   glVertex3f(200.0,300.0,-0.75)
-   glEnd()
+  pyglet.glBegin(GL_LINES)
+  pyglet.glVertex3f(100.0,100.0,0.25)
+  pyglet.glVertex3f(200.0,300.0,-0.75)
+  pyglet.glEnd()
 pyglet.app.run()
