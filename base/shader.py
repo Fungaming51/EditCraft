@@ -1,6 +1,5 @@
 from pyglet.graphics.shader import Shader, ShaderProgram
 import pyglet
-from pyglet.gl import *
 
 vertex_source = """#version 330
     layout(location = 0) in vec2 vertices;
@@ -30,6 +29,3 @@ vert_shader = Shader(vertex_source, 'vertex')
 frag_shader = Shader(fragment_source, 'fragment')
 program = ShaderProgram(vert_shader, frag_shader)
 
-batch = pyglet.graphics.Batch()
-
-program.vertex_list(3, pyglet.gl.GL_TRIANGLES, batch, vertices=('f', (200, 400, 350,300, 450)))
