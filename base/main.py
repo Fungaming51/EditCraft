@@ -1,7 +1,7 @@
 import pyglet
 from pyglet.gl import *
 from pyglet.window import *
-from pyglet.shapes import *
+#from pyglet.shapes import *
 #import shader
 
 batch = pyglet.graphics.Batch()
