@@ -2,6 +2,7 @@ import pyglet
 from pyglet.gl import *
 from pyglet.window import *
 from pyglet.math import Mat4, Vec3
+from mobs.monsters.skeleton import Skeleton
 #from pyglet.shapes import *
 #import shader
 
@@ -26,6 +27,7 @@ def on_draw():
 if __name__ == '__main__':
     glEnable(GL_DEPTH_TEST)
     glEnable(GL_CULL_FACE)
-    model_knife = pyglet.model.load("Knife.obj", batch=batch)
+    #model_knife = pyglet.model.load("Knife.obj", batch=batch)
+    Skeleton.torso
     window.view = Mat4.look_at(position=Vec3(0,0,5), target=Vec3(0,0,0), up=Vec3(0,1,0))
     pyglet.app.run()
