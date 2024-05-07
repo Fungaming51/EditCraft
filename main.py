@@ -28,6 +28,6 @@ if __name__ == '__main__':
     glEnable(GL_DEPTH_TEST)
     glEnable(GL_CULL_FACE)
     #model_knife = pyglet.model.load("Knife.obj", batch=batch)
-    Skeleton.torso
+    Skeleton.skeleton
     window.view = Mat4.look_at(position=Vec3(0,0,5), target=Vec3(0,0,0), up=Vec3(0,1,0))
     pyglet.app.run()
