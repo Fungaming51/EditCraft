@@ -1,0 +1,16 @@
+.dub
+docs.json
+__dummy.html
+docs/
+/edit_craft
+edit_craft.so
+edit_craft.dylib
+edit_craft.dll
+edit_craft.a
+edit_craft.lib
+edit_craft-test-*
+*.exe
+*.pdb
+*.o
+*.obj
+*.lst
