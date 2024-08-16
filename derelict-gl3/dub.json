@@ -9,4 +9,8 @@
 	"description": "a game made for doing almost anything",
 	"license": "CC-BY-SA-4.0",
 	"name": "edit_craft"
+	 "importPaths": [
+        "source",
+        "../../source"
+    ]
 }
