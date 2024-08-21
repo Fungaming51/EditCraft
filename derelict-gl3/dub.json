@@ -4,7 +4,7 @@
 	],
 	"copyright": "Copyright @ 2024, Jacob Conyers",
 	"dependencies": {
-		"derelict-gl3": "~>1.0.24",
+		"derelict-gl3": "~>2.0.0",
 		"derelict-glfw3": "~>3.1.3"
 	},
 	"description": "a game made for doing almost anything",
