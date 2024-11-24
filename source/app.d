@@ -7,7 +7,10 @@ void main(){
 	while (!WindowShouldClose()){
 		BeginDrawing();
 		ClearBackground(Colors.BLACK);
-		DrawText("Hello, User...", 250, 250, 28, Colors.RAYWHITE);
+		//DrawText("Hello, User...", 250, 250, 28, Colors.RAYWHITE);
+		
+		DrawRectangle(100, 100, 100, 100, Colors.RED);
+		
 		EndDrawing();
 	}
 	CloseWindow();
