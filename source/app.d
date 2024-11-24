@@ -12,9 +12,9 @@ void main(){
 		ClearBackground(Colors.BLACK);
 		//DrawText("Hello, User...", 250, 250, 28, Colors.RAYWHITE);
 		
-		DrawRectangle(100, 100, 100, 100, Colors.RED);
+		//DrawRectangle(100, 100, 100, 100, Colors.RED);
 		
-		DrawTexture(texture, 100, 200, Colors.WHITE);
+		DrawTexture(texture, 100, 400, Colors.WHITE);
 		
 		EndDrawing();
 	}
