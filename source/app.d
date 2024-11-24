@@ -6,8 +6,8 @@ void main(){
 	SetTargetFPS(60);
 	while (!WindowShouldClose()){
 		BeginDrawing();
-		ClearBackground(Colors.RAYWHITE);
-		DrawText("Hello, User...", 400, 300, 28, Colors.BLACK);
+		ClearBackground(Colors.BLACK);
+		DrawText("Hello, User...", 250, 250, 28, Colors.RAYWHITE);
 		EndDrawing();
 	}
 	CloseWindow();
