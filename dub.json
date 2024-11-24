@@ -4,16 +4,24 @@
 	],
 	"copyright": "Copyright @ 2024, Jacob Conyers",
 	"dependencies": {
-		"raylib-d": "~>5.0.1"
+		"raylib-d": "~>5.5.1"
 	},
-	"targetPath": "bin",
-	"targetType": "executable",
+	"lflags-linux": [
+		"-rpath=$$ORIGIN"
+	],
+	"lflags-osx": [
+		"-rpath",
+		"@executable_path/"
+	],
+	"lflags-posix": [
+		"-L."
+	],
+	"libs": [
+		"raylib"
+	],
 	"description": "a game made for doing almost anything",
-	"lflags-linux": ["-rpath=$$ORIGIN"],
-	"lflags-osx": ["-rpath",
-		"@executable_path/"],
-	"lflags-posix": ["-L."],
-	"libs": ["raylib"],
 	"license": "CC-BY-SA-4.0",
-	"name": "edit_craft"
+	"name": "edit_craft",
+	"targetPath": "bin",
+	"targetType": "executable"
 }
